@@ -36,7 +36,7 @@ public class ParkingSpotModel implements Serializable {
   private LocalDateTime registrationDate;
 
   @Column(nullable = false, length = 130)
-  private String responsibleName;
+  private String ownerName;
 
   @Column(nullable = false, length = 30)
   private String apartment;
@@ -92,12 +92,12 @@ public class ParkingSpotModel implements Serializable {
     this.registrationDate = registrationDate;
   }
 
-  public String getResponsibleName() {
-    return responsibleName;
+  public String getOwnerName() {
+    return ownerName;
   }
 
-  public void setResponsibleName(String responsibleName) {
-    this.responsibleName = responsibleName;
+  public void setOwnerName(String ownerName) {
+    this.ownerName = ownerName;
   }
 
   public String getApartment() {
