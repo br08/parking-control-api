@@ -26,10 +26,13 @@ public class ParkingSpotModel implements Serializable {
   @Column(nullable = false, unique = true, length = 7)
   private String carLicensePlate;
 
-  @Column(nullable = false, unique = true, length = 70)
+  @Column(nullable = false, length = 30)
   private String carBrand;
 
-  @Column(nullable = false, length = 70)
+  @Column(nullable = false, length = 30)
+  private String carModel;
+
+  @Column(nullable = false, length = 30)
   private String carColor;
 
   @Column(nullable = false)
@@ -74,6 +77,14 @@ public class ParkingSpotModel implements Serializable {
 
   public void setCarBrand(String carBrand) {
     this.carBrand = carBrand;
+  }
+
+  public String getCarModel() {
+    return carModel;
+  }
+
+  public void setCarModel(String carModel) {
+    this.carModel = carModel;
   }
 
   public String getCarColor() {
